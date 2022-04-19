@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,9 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
-  background: #333;
-  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  background: #eeede7;
+  color: #868b8e;
 }
 
 body {
@@ -36,7 +36,7 @@ section {
 
 article {
   margin: 0.5em 0.5em 0.5em 0;
-  border: 1px solid whitesmoke;
+  border: 1px solid #868b8e;
   border-radius: 10px;
   padding: 1em;
 }
@@ -65,10 +65,57 @@ form {
   margin: 0 0.25em 0 0;
   background: transparent;
   border: none;
-  color: whitesmoke;
+  color: #868b8e;
   font-size: 1rem;
   transition: 0.1s ease all;
 }
 .reactionButton:hover {
   transform: scale(1.2);
+}
+
+.navLink {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navHeader {
+  display: flex;
+  justify-content: center;
+}
+.navImage {
+  height: calc(100px + 2vh);
+  width: calc(100px + 2vw);
+  transition: 0.2s ease all;
+  cursor: pointer;
+}
+.navImage:hover {
+  transform: scale(0.95);
+}
+
+a {
+  color: #b9b7bd;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #647c90;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #647c90;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
